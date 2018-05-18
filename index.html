@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html>
-<meta name= "viewport" content ="width=device-width,intial-
-
-scale=1.0">
+<meta name= "viewport" content ="width=device-width,intial-scale=1.0">
 <head>
 <style>
-body{background-color: silver;color: blue;}
-h1{background-color: silver;color: red; text-align: center; font-style: 
-italic; font-style: oblique;}
-p.d1{font- family: verdana;background-color: silver;color: red;}
-p{font-family: verdana;background-color: silver; font-size: 20px;}
+body{background-image: url("http://thiswallpaper.com/cdn/hdwallpapers/14/abstraction%20passage%20light%20black%20blue
+
+%20wallpaper.jpg");background-repeat: no-repeat;color: black;text-shadow: 0 0 25px red, 0 0 5px darkblue;}
+h1{ color: white; text-align: center; font-style:italic; font-style: oblique;}
+p.d1{font- family: verdana;color: white;}
+p{text-align: center;font-family: verdana; font-size: 20px; color:white}
+p.d5{ background-color: GhostWhite;}
 </style>
 
 </head>
 
 <body>
-Hello!
+
 <h1> About me.  </h1>
 <p class="d1"> Cheerio! You have reached the bio-data page of R. 
 Kumaraguruparan.  </p>
 <button type="button" onclick= "myfunction()">Click Me!</button>
-<p id="d1"></p>
+<p id="d1">&#9824</p>
 <p id="d2"></p>
 <p id="d3"></p>
 <p id="d4"></p>
+<button type="button" onclick= "typeWriter()">Continue?</button>
+<p id="demo">&#9830</p>
+<button type="button" onclick= "Ct()">Contact?</button>
+<p id="d5">&#9829</p>
 <script>
 function myfunction()
 {
- document.getElementById("d1").innerHTML= "This page will elaborate about this person.";
- document.getElementById("d2").innerHTML= " Sadly, there isn't much. Just about a boy from Chennai, studying in the Mechanical Department :'-)"; 
+ document.getElementById("d1").innerHTML+= " This page will elaborate about this person.";
+ document.getElementById("d2").innerHTML= " Sadly, there isn't much. Just about a boy from Chennai, studying in the Mechanical Department :')"; 
  document.getElementById("d3").innerHTML= " Interests? Literature, Coding, Movies and Music.";
- document.getElementById("d4").innerHTML= " Thank you for your time. You'll know more about me in the upcoming days..";
+ document.getElementById("d4").innerHTML= " Description: An extremely introverted person who has contrasting ideas of existence. We should talk 
+
+sometime :)";
+ }
+ var i = 0;
+ 
+var txt = ' Currently working in TCF, AIESEC. Aspiring to work in Spider.';
+var speed = 70;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+function Ct()
+{
+  document.getElementById("d5").innerHTML+= " Email: kgpr.roshan@gmail.com. Phone: +919500818109.";
+
 }
 
 </script>
